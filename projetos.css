@@ -1,0 +1,116 @@
+/* Reset e Configuração Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0b0210;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Fundo com brilho */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(142,0,255,0.2), transparent 60%);
+    z-index: -1;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Seção Projetos */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+}
+
+.projeto-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.projeto-card {
+    background: #1c0a33;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(142, 0, 255, 0.5);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(142, 0, 255, 0.7);
+}
+
+.projeto-img {
+    background-color: #ffffff;
+    height: 150px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.projeto-texto h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e4c3ff;
+}
+
+.projeto-texto p {
+    font-size: 1rem;
+    color: #b983ff;
+}
+
+.projeto-icons {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* Seção Contato */
+.contato {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    color: #e4c3ff;
+}
+
+.contato p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.social-icons span {
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icons span:hover {
+    transform: scale(1.2);
+}
