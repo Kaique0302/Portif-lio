@@ -5,7 +5,13 @@ body {
   color: #e4e4e4;
   margin: 0;
   padding: 0;
+  
 }
+
+body {
+  cursor: url('/Normal.cur'), auto;
+}
+
 
 
 /* Navbar */
@@ -16,12 +22,28 @@ body {
   padding: 1rem 0;
 }
 
+@keyframes rgbGradient {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 .navbar-brand {
   font-family: "Kalam", cursive;
-  color: #e4e4e4;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  background: linear-gradient(90deg, rgb(255, 0, 0), rgb(255, 165, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 0, 255));
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  animation: rgbGradient 3s ease-in-out infinite; /* Gradiente movendo de direita para esquerda */
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline;
 }
+
 
 .navbar-brand .code-icon {
   color: #6c5ce7;
@@ -140,7 +162,7 @@ main {
 }
 
 .main-container {
-  /* Renomeei a classe para evitar conflito */
+  
   background-color: #4e2c7f;
   /* Fundo roxo claro dentro do container */
   display: flex;
@@ -374,8 +396,11 @@ main {
 
 /* Container do botão Veja mais */
 .button-container {
+  top: -40px;
+  position: relative;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 56px;
+  
   /* Distância dos cards */
 }
 
