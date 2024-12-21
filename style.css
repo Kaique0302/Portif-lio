@@ -95,7 +95,7 @@ body {
 }
 
 .btn-group .btn {
-  border-radius: 25px;
+  border-radius: 2.5vh;
   padding: 0.75rem 1.5rem;
 }
 
@@ -154,6 +154,8 @@ main {
   border-radius: 10px;
   /* Bordas arredondadas no container */
 }
+
+
 
 .left-content img {
   width: 350px;
@@ -594,5 +596,567 @@ main {
 }
 
 
+/* General Reset */
+body {
+  background-color: #1a1126;
+  color: #e4e4e4;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+  }
+  .header {
+    padding: 10px;
+  }
+}
+
+/* Navbar */
+.navbar {
+  font-family: "Heebo", sans-serif;
+  background-color: #1a1126;
+  color: #e4e4e4;
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: "Kalam", cursive;
+  color: #e4e4e4;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.navbar-brand .code-icon {
+  color: #6c5ce7;
+}
+
+.nav-link {
+  color: #e4e4e4 !important;
+  margin-left: 1rem;
+}
+
+.nav-link:hover {
+  color: #6c5ce7 !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background-color: #1a1126;
+  color: #e4e4e4;
+  padding-top: 5rem;
+}
+
+.hero h1 {
+  background: linear-gradient(to right, #9955E8, #95ff7b, #95ff7b);
+  background-size: 400% 400%;
+  color: transparent;
+  -webkit-background-clip: text;
+  /* Para navegadores WebKit, como Chrome, Safari */
+  -moz-background-clip: text;
+  /* Para Firefox */
+  background-clip: text;
+  /* Propriedade padrão */
+  animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero h1 {
+  font-family: "Kalam", cursive;
+  font-size: 3.5rem;
+  font-weight: 56;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-group .btn {
+  border-radius: 2.5vh;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-purple {
+  background-color: #9b59b6;
+  color: #fff;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #8e44ad;
+}
+
+.hero-img {
+  margin-top: -3rem;
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Main Section */
+main {
+  font-family: "Heebo", sans-serif;
+  background-color: #2c1c4d;
+  /* Fundo roxo escuro para a área ao redor */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.main-container {
+  /* Renomeei a classe para evitar conflito */
+  background-color: #4e2c7f;
+  /* Fundo roxo claro dentro do container */
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 80px;
+  /* Aumentei o espaçamento entre imagem e texto */
+  padding: 40px;
+  /* Espaçamento interno no container */
+  border-radius: 10px;
+  /* Bordas arredondadas no container */
+}
+
+.left-content img {
+  width: 350px;
+  /* Tamanho da imagem */
+  height: auto;
+  object-fit: cover;
+  /* Para garantir que a imagem preencha o espaço sem distorção */
+  animation: float-large 6s ease-in-out infinite;
+  /* Animação de flutuação */
+  transition: transform 0.3s ease;
+  /* Transição suave no hover */
+}
+
+/* Animação de flutuação */
+@keyframes float-large {
+  0% {
+    transform: translateY(0);
+    /* Início sem deslocamento */
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Desloca um pouco para cima */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Retorna ao ponto inicial */
+  }
+}
+
+/* Adicionando um efeito de hover, */
+.side-image-large:hover {
+  transform: scale(1.05);
+  /* Leve aumento ao passar o mouse */
+}
+
+.right-content {
+  max-width: 600px;
+  /* Largura máxima do texto */
+}
+
+/* Skills Icons */
+.skills-icons {
+  display: flex;
+  gap: 30px;
+  /* Aumentei o espaçamento entre os ícones */
+  margin-bottom: 30px;
+  /* Mais espaço entre os ícones e o título */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    /* Início sem deslocamento */
+  }
+
+  50% {
+    transform: translateY(-15px);
+    /* Desloca um pouco para cima */
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Retorna ao ponto inicial */
+  }
+}
+
+/* Adicionando hover para um leve efeito de transformação, se desejar */
+.skill-icon:hover {
+  transform: scale(1.1);
+  /* Leve aumento no hover */
+}
+
+.skills-icons img {
+  width: 40px;
+  /* Tamanho dos ícones */
+  height: auto;
+  position: relative;
+  animation: float 4s ease-in-out infinite;
+  /* Animação para flutuar */
+}
+
+.right-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+.right-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+.resume-btn {
+  background-color: #4c2f7f;
+  /* Botão roxo */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.resume-btn:hover {
+  background-color: #6d3fb8;
+  /* Efeito hover */
+}
+
+/* cards */
+.card {
+  font-family: "Heebo", sans-serif;
+  background-color: #41286B;
+  color: white;
+  width: 384px;
+  height: 344px;
+  margin: 10px;
+  border: none;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* Garante que o conteúdo não saia do card */
+  transition: transform 0.5s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra suave para o card */
+}
+
+.card:hover {
+  transform: translateY(-15px) scale(1.05) rotate(3deg);
+  /* Card sobe, aumenta e gira levemente */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  /* Sombra mais forte */
+  filter: brightness(1.1);
+  /* Aumenta o brilho para dar um efeito de destaque */
+}
+
+/* Card com link */
+.card-link {
+  text-decoration: none;
+  /* Remove o sublinhado do link */
+  display: inline-block;
+  /* Permite que o link seja um bloco e ocupe o tamanho do card */
+  transition: transform 0.3s ease;
+  /* Animação suave no hover */
+}
+
+.card-img-container {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  padding: 10px;
+  /* Espaçamento interno */
+}
+
+.card-img-top {
+  display: block;
+  margin: auto;
+  width: 80%;
+  /* Ajuste a largura da imagem */
+  height: auto;
+  border: 2px solid white;
+  /* Borda branca ao redor da imagem */
+  border-radius: 8px;
+  /* Arredondamento nas bordas da imagem */
+}
+
+.card-body {
+  color: silver;
+  padding: 15px;
+  flex-grow: 1;
+  font-size: 13px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+.card-date {
+  font-family: "Heebo", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.card-footer p {
+  font-family: "Heebo", sans-serif;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card-footer a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card-footer a:hover {
+  color: #6c5ce7;
+  /* Cor de hover no link */
+}
 
 
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-content img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .right-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .skills-icons {
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .circle-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  .btn-group .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .main-container {
+    padding: 15px;
+  }
+
+  .left-content img {
+    width: 100%;
+  }
+
+  .right-content {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .card-body {
+    font-size: 12px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-description {
+    font-size: 14px;
+  }
+
+  .btn-veja-mais {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+/* Media Query for Large Screens (Desktops and larger tablets) */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .main-container {
+    max-width: 1200px;
+    padding: 40px;
+  }
+
+  .left-content img {
+    width: 350px;
+  }
+
+  .right-content {
+    max-width: 600px;
+  }
+
+  .skills-icons {
+    gap: 30px;
+  }
+
+  .card {
+    width: 384px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+  }
+  .header {
+    padding: 10px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .card-container .card {
+    width: 45%; /* Para telas médias, como tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container .card {
+    width: 100%; /* Para telas pequenas, como celulares */
+  }
+}
+
+/* Melhorando a responsividade */
+@media (max-width: 480px) {
+  .card-container {
+    padding: 30px 10px; /* Reduzindo o espaçamento nos dispositivos menores */
+  }
+
+  .card-container .card {
+    padding: 15px; /* Menos preenchimento nos cards em telas pequenas */
+  }
+
+  .card-container .card h3 {
+    font-size: 1.3rem; /* Ajuste do tamanho do título */
+  }
+
+  .card-container .card p {
+    font-size: 0.9rem; /* Ajuste do tamanho da descrição */
+  }
+}
