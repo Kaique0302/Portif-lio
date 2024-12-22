@@ -46,7 +46,36 @@ body {
   display: inline;
 }
 
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; /* Cor de fundo */
+  border-top: 5px solid #3498db; /* Cor do arco */
+  border-radius: 50%; /* Faz o círculo */
+  animation: spin 1s linear infinite; /* Animação de rotação */
+}
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9); /* Fundo translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Fica acima de tudo */
+}
 
 
 .navbar-brand .code-icon {
@@ -1162,3 +1191,68 @@ main {
     font-size: 0.9rem; /* Ajuste do tamanho da descrição */
   }
 }
+
+/* Cores claras e escuras */
+
+
+/* Tema Claro */
+body.light-theme {
+  background-color: #6a6a9e ; /* Fundo claro */
+  color: #333; /* Texto escuro */
+}
+
+.navbar.light-theme {
+  background-color: #6a6a9e ; /* Navbar branca */
+  color: #333; /* Texto escuro */
+}
+
+footer.light-theme {
+  background-color: #6a6a9e ; /* Cor suave no rodapé */
+  color: #666; /* Texto escuro */
+}
+
+/* Tema Escuro (Roxo) */
+body.dark-theme {
+  background-color: #1a1126; /* Fundo roxo escuro */
+  color: #f1f1f1; /* Texto claro */
+}
+
+.navbar.dark-theme {
+  background-color: #1a1126; /* Navbar roxa */
+  color: #f1f1f1; /* Texto claro */
+}
+
+footer.dark-theme {
+  background-color: #3b3b8c; /* Rodapé roxo escuro */
+  color: #f1f1f1; /* Texto claro */
+}
+
+
+
+
+
+
+/* Estilo do botão de alternar tema */
+.theme-toggle {
+  background: none; /* Remove o fundo do botão */
+  border: none; /* Remove a borda */
+  padding: 0; /* Remove o padding para a imagem ocupar todo o espaço */
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  margin-left: 100px; /* Ajuste o valor conforme necessário */
+
+}
+
+.button-icon {
+  width: 20px; /* Ajuste o tamanho da imagem */
+  height: 20px; /* Ajuste o tamanho da imagem */
+}
+
+
+
+button.theme-toggle:hover {
+  background-color: #555;
+}
+
+
+
+
