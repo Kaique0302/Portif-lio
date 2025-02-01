@@ -1,4 +1,5 @@
-/* General Reset */
+
+
 body {
 
   background-color: #1a1126;
@@ -36,14 +37,25 @@ body {
   font-size: 1.2rem;
   font-weight: 700;
   background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(255, 255, 0), rgb(255, 0, 255));
-  background-size: 300% 100%;
+  background-size: 500% 100%; /* Aumenta o tamanho para um movimento mais suave */
   background-position: 100% 0;
-  animation: rgbGradient 3s ease-in-out infinite;
+  animation: rgbGradient 5s linear infinite; /* Ajuste para animação suave e contínua */
   -webkit-background-clip: text; /* Vendor prefix for Webkit-based browsers */
   -moz-background-clip: text;    /* Vendor prefix for Firefox */
   background-clip: text;         /* Standard property */
   color: transparent;            /* Makes the text transparent to show the background */
   display: inline;
+}
+@keyframes rgbGradient {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
 }
 
 .loader {
@@ -95,7 +107,7 @@ body {
 .hero {
   min-height: 100vh;
   background-color: #1a1126;
-  color: #e4e4e4;
+  color: silver;
   padding-top: 5rem;
 }
 
@@ -193,10 +205,36 @@ main {
   align-items: center;
   padding: 60px 20px;
 }
+#h2_main {
+  color: #171023;
+  background: linear-gradient(90deg, rgb(75, 0, 130), rgb(238, 130, 238), rgb(148, 0, 211), rgb(221, 160, 221), rgb(255, 0, 255));
+
+  background-size: 500% 100%; /* Aumenta o tamanho para um movimento mais suave */
+  background-position: 100% 0;
+  animation: rgbGradient 5s linear infinite; /* Ajuste para animação suave e contínua */
+  -webkit-background-clip: text; /* Vendor prefix for Webkit-based browsers */
+  -moz-background-clip: text;    /* Vendor prefix for Firefox */
+  background-clip: text;         /* Standard property */
+  color: transparent;            /* Makes the text transparent to show the background */
+  display: inline;
+}
+
+@keyframes rgbGradient {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
 
 .main-container {
   
   background-color: #4e2c7f;
+  font-size: 1.8;
   /* Fundo roxo claro dentro do container */
   display: flex;
   max-width: 1200px;
@@ -208,6 +246,7 @@ main {
   /* Espaçamento interno no container */
   border-radius: 10px;
   /* Bordas arredondadas no container */
+
 }
 
 
@@ -329,27 +368,16 @@ main {
   /* Efeito hover */
 }
 
-/* cards */
+/* cards */ 
 
 .card {
-  font-family: "Heebo", sans-serif;
-  background-color: #41286B;
-  color: white;
-  width: 384px;
-  height: 344px;
-  margin: 10px;
-  border: none;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  width: 200px; /* Ajusta a largura dos cards */
+  height: 200px; /* Ajusta a altura dos cards */
+  margin: 10px; /* Ajusta a margem ao redor dos cards */
   position: relative;
-  overflow: hidden;
-  /* Garante que o conteúdo não saia do card */
+  overflow: hidden; /* Impede que o conteúdo ultrapasse os limites do card */
   transition: transform 0.5s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra suave para o card */
-
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao card */
 }
 
 .card:hover {
@@ -426,61 +454,6 @@ main {
   gap: 20px;
 }
 
-
-/* Container do botão Veja mais */
-.button-container {
-  top: -40px;
-  position: relative;
-  text-align: center;
-  margin-top: 56px;
-  
-  /* Distância dos cards */
-}
-
-/* Estilo do botão Veja mais */
-.btn-veja-mais {
-  display: inline-block;
-  background-color: #413A4F;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 2px solid transparent;
-  /* Borda inicial */
-  width: 128px;
-  height: 56px;
-  text-align: center;
-  /* Garantir que o texto esteja centralizado */
-  line-height: 30px;
-  /* Alinha verticalmente o texto */
-  white-space: nowrap;
-  /* Impede que o texto quebre em várias linhas */
-  transition: all 0.3s ease;
-  /* Transição suave para hover */
-}
-
-
-/* Estilo da flecha */
-.arrow-icon {
-  width: 18px;
-  /* Largura da flecha */
-  height: 15px;
-  /* Altura da flecha */
-  margin-left: 8px;
-  /* Espaço entre o texto e a flecha */
-}
-
-
-/* Efeito hover no botão */
-.btn-veja-mais:hover {
-  background-color: #4d3b7d;
-  /* Cor mais clara para o hover */
-  border: 2px solid #41286B;
-  /* Borda roxa no hover */
-  cursor: pointer;
-  /* Cursor de pointer */
-}
 
 
 /* Estilo da seção de contato */

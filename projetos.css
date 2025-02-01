@@ -1,116 +1,154 @@
-/* Reset e Configuração Geral */
-* {
+/* Fundo com tema de universo e constelações */
+body {
+    background: #1a1a2e; /* Fundo roxo escuro */
+    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #0b0210;
-    color: #ffffff;
-    overflow-x: hidden;
-}
-
-/* Fundo com brilho */
-.background {
-    position: fixed;
+    overflow: hidden; /* Para evitar barras de rolagem */
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(142,0,255,0.2), transparent 60%);
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.2; /* Textura de estrelas */
     z-index: -1;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 30px 0;
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-/* Seção Projetos */
-.projetos {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 20px;
-}
-
-.projeto-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.projeto-card {
-    background: #1c0a33;
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(142, 0, 255, 0.5);
-    padding: 20px;
-    width: 400px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.projeto-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(142, 0, 255, 0.7);
-}
-
-.projeto-img {
+  }
+  
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, transparent, rgba(26, 26, 46, 0.8));
+    z-index: -1;
+  }
+  
+  /* Estilos de constelações e estrelas */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.5;
+    animation: starAnimation 200s infinite linear;
+  }
+  
+  /* Animação de movimento das estrelas */
+  @keyframes starAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+  }
+  
+  /* Animação de partículas dinâmicas */
+  @keyframes particleAnimation {
+    0% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(calc(100vw - 100px), calc(100vh - 100px), 0) scale(2);
+    }
+  }
+  
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -3;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
     background-color: #ffffff;
-    height: 150px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-}
-
-.projeto-texto h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #e4c3ff;
-}
-
-.projeto-texto p {
-    font-size: 1rem;
-    color: #b983ff;
-}
-
-.projeto-icons {
-    margin-top: 15px;
-    font-size: 1.2rem;
-}
-
-/* Seção Contato */
-.contato {
-    text-align: center;
-    margin-top: 40px;
+    border-radius: 50%;
+    animation: particleAnimation 15s infinite ease-in-out;
+    opacity: 0;
+  }
+  
+  .project-card {
+    position: relative;
+    width: 300px;
     padding: 20px;
-}
-
-.contato h2 {
-    font-size: 2rem;
-    color: #e4c3ff;
-}
-
-.contato p {
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-.social-icons {
-    margin-top: 20px;
-    font-size: 1.5rem;
-}
-
-.social-icons span {
-    margin: 0 10px;
+    background: #2e2e40;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+  }
+  
+  /* Borda RGB animada */
+  .project-card::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 18px; /* Levemente maior que o cartão */
+    background: linear-gradient(45deg, red, blue, green, yellow, purple);
+    background-size: 300%;
+    z-index: -1;
+    animation: border-animate 6s linear infinite;
+  }
+  
+  @keyframes border-animate {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Títulos e textos */
+  .project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #8f8fff;
+  }
+  
+  .project-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #b8b8d4;
+  }
+  
+  /* Botão */
+  .project-card button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #4e4ecb;
+    color: white;
     cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.social-icons span:hover {
-    transform: scale(1.2);
-}
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .project-card button:hover {
+    background: #6060ff;
+    transform: scale(1.05);
+  }
+  

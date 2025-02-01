@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Kalam:wght@300;400;700&display=swap"
         rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,10 +59,10 @@
 <section class="hero d-flex align-items-center">
     <div class="main-container">
         <div class="row">
-            <div class="col-md-6 text-content">
+            <div  class="col-md-6 text-content">
                 <h1>Olá, eu sou o <span class="highlight">Kaique</span></h1>
                 <h2>Fullstack Developer</h2>
-                <p>Com 4 anos de experiência no mercado de tecnologia, sou um entusiasta apaixonado por programação,
+                <p  data-aos="fade-left" >Com 4 anos de experiência no mercado de tecnologia, sou um entusiasta apaixonado por programação,
                     especializado em Python e desenvolvimento web. Sempre em busca de aprimoramento, trabalho na criação
                     de soluções eficientes e inovadoras, combinando habilidades técnicas com criatividade para entregar
                     resultados de impacto.</p>
@@ -80,7 +81,7 @@
 
 
 <main>
-    <section  id="main" class="main-container">
+    <section data-aos="fade-up" data-aos-duration="1000" id="main" class="main-container">
         <div class="left-content">
             <img src="/kaiquezin-removebg-preview.png" alt="Person working at laptop" />
         </div>
@@ -91,7 +92,7 @@
                 <img src="/icons-softskils/css-3.png" alt="CSS" />
                 <img src="/icons-softskils/bootstrap.png" alt="Bootstrap" />
             </div>
-            <h2>Desenvolvedor de Software e Web
+            <h2 id="h2_main" >Desenvolvedor de Software e Web - Analista De Dados
 
             </h2>
             <p>
@@ -101,7 +102,6 @@
                 
                 Se você procura um profissional comprometido em entregar qualidade e inovação, estou à disposição para trazer o seu projeto à vida.
             </p>
-            <button class="resume-btn">Meu Resumo</button>
         </div>
     </section>
 </main>
@@ -109,11 +109,11 @@
 
 
 <!-- Section para os cards de projetos -->
-<section id="projetos" class="mt-5">
+<section  data-aos="fade-up" data-aos-duration="1000" id="projetos" class="mt-5">
     <div class="container">
         <div class="row justify-content-center">
             <!-- Card 1 -->
-            <div class="col-md-4">
+            <div id="cardcompleto" class="col-md-4">
                 <a href="https://github.com/seu-perfil" class="card-link">
                     <div class="card">
                         <div class="card-img-container">
@@ -172,25 +172,18 @@
                 </div>
             </div>
             
+            
         </div>
         
     </a>
-        <!-- Botão Veja Mais com a flecha -->
-        <div class="button-container">
-            <a href="#" class="btn-veja-mais">
-    
-                Mais
-                <img src="/flecha button.png" alt="Flecha" class="arrow-icon">
-            </a>
-        </div>
-    </div>
+      
 
 
 
 </section>
 
 
-<section id="contato" class="contact-section">
+<section data-aos="fade-up" data-aos-duration="1000" id="contato" class="contact-section">
     
     <div class="contact-container">
         <!-- Círculo com imagem -->
@@ -224,7 +217,7 @@
             </div>
 </section>
 
-<footer id="footer" class="footer">
+<footer data-aos="fade-up"id="footer" class="footer">
     <div class="footer-container">
         <p class="footer-text">Kaique Mendes 2024. Layout based on Rocketseat’s template S2.</p>
         <div class="footer-icons">
@@ -244,7 +237,11 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+  
 <script>
   window.addEventListener("load", function () {
     const loadingScreen = document.getElementById("loading-screen");
